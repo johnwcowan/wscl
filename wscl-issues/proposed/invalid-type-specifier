@@ -5,6 +5,7 @@ Category:       CHANGE
 Status:         proposed
 Edit History:   14-Jul-21, Version 1 by Bike.
 References:     TYPEP, SUBTYPEP, COERCE, MAKE-SEQUENCE, MAP, MERGE
+                UPGRADED-ARRAY-ELEMENT-TYPE, UPGRADED-COMPLEX-PART-TYPE
 
 Problem Description:
 
