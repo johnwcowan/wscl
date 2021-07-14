@@ -1,9 +1,10 @@
 Issue:          INVALID-TYPE-SPECIFIER
 Forum:          Cleanup
+Related issues: DEFTYPE-DESTRUCTURING, DEFTYPE-KEY, TYPE-SPECIFIER-ABBREVIATION
 Category:       CHANGE
 Status:         proposed
 Edit History:   14-Jul-21, Version 1 by Bike.
-References:     TYPEP, SUBTYPEP
+References:     TYPEP, SUBTYPEP, COERCE, MAKE-SEQUENCE, MAP, MERGE
 
 Problem Description:
 
@@ -73,8 +74,7 @@ Examples:
 
   (subtypep 5 5)
   (typep 5 'mod)
-  (deftype foo (bar) (declare (ignore bar)) 't)
-  (upgraded-array-element-type 'foo)
+  (deftype foo (bar) (declare (ignore bar)) 't) (typep 5 'foo)
 
 Current Practice:
 
@@ -114,6 +114,6 @@ Benefits:
   Either proposal gives more coherent behavior. Either proposal legitimizes the
   rare but existent idiom of using (values (ignore-errors (subtypep foo t)))
   to determine if FOO is a valid type specifier, though this could perhaps be
-  handled better but an extension of the type system.
+  handled better by an extension of the type system.
 
 Discussion:
